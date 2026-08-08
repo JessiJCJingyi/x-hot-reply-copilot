@@ -1,0 +1,117 @@
+# X Hot Reply Copilot
+
+A product-account growth workflow for finding hot X posts and generating high-quality replies that sound human, useful, and non-spammy.
+
+This repository contains the public-safe workflow and skill packaging for **X Hot Reply Copilot**. It is designed for product teams, founders, and official product accounts that want to participate in high-visibility X/Twitter conversations without sounding like bots or ads.
+
+## What It Does
+
+X Hot Reply Copilot helps product accounts:
+
+- identify recent X posts with strong reply opportunity
+- prioritize posts by freshness, visible traction, and reply timing
+- generate product-aware reply candidates
+- add value before mentioning the product
+- avoid generic AI-sounding comments
+- avoid spammy or misleading promotion
+- manually choose, edit, and post replies
+
+## Core Workflow
+
+1. Open X/Twitter For You, Following, Search, Profile, or List pages.
+2. Scan visible posts from the last 1h / 3h / 6h / 12h.
+3. Rank posts by reply opportunity.
+4. Select a high-potential post.
+5. Read the post content and visible metrics.
+6. Generate reply candidates using the product profile.
+7. Choose one reply manually.
+8. Copy or insert the reply.
+9. Track which replies earn views and engagement.
+
+## Reply Modes
+
+### Add Value
+
+Contribute a useful point without mentioning the product.
+
+Use this for most replies. The reply should stand on its own even if the reader has no idea what product is behind the account.
+
+### Builder Lens
+
+Respond from a product-builder perspective without naming the product.
+
+Use this when the original post discusses product design, workflow, users, retention, onboarding, AI tools, SaaS, or building in public.
+
+### Relevant Mention
+
+Lightly connect the reply to the product when the original post is highly relevant.
+
+The product is context, not the main character. No hard selling.
+
+### Direct CTA
+
+Use only when the original post explicitly asks for tools, recommendations, or solutions.
+
+This mode should never be triggered by default automation.
+
+## Product Profile Inputs
+
+A product account should provide:
+
+- Product URL
+- Product name
+- One-line positioning
+- Vision
+- Mission
+- Target users
+- Core pain points
+- Core features
+- Use cases
+- Differentiator
+- Brand tone
+- Banned claims
+- Banned words
+- Product mention policy
+
+See [templates/product-profile.md](templates/product-profile.md).
+
+## Safety Principles
+
+- Do not auto-publish.
+- Do not mass-comment.
+- Do not pretend to be a third-party user recommending your own product.
+- Do not fabricate metrics, customer stories, or personal experience.
+- Do not force product mentions into unrelated posts.
+- Default to value-first replies.
+- Keep the human in the loop.
+
+## Suggested Success Metrics
+
+- Replies generated per day
+- Replies posted per day
+- Average 24h views per reply
+- Reply engagement rate
+- Copy / insert rate
+- User-rated reply quality
+- Percentage of replies requiring no major edit
+
+## Roadmap
+
+See [docs/roadmap.md](docs/roadmap.md).
+
+## Public-Safe Scope
+
+This repository intentionally contains only the public-safe workflow and skill packaging.
+
+It does **not** include:
+
+- private commercial prompts
+- validated high-performing reply examples
+- proprietary scoring weights
+- private product analytics
+- third-party private extension code
+- API keys or credentials
+
+## Status
+
+Early product workflow. Use this as a starting point for product-account growth experiments, not as a fully automated posting system.
