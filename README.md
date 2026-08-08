@@ -75,6 +75,57 @@ A product account should provide:
 
 See [templates/product-profile.md](templates/product-profile.md).
 
+## How To Use This Skill
+
+This repository contains a public-safe Codex skill for planning and operating an X hot-post reply workflow.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/JessiJCJingyi/x-hot-reply-copilot
+```
+
+Then use `SKILL.md` as a custom Codex skill, or reference this repository when asking an AI coding/product agent to help with X product-account growth.
+
+Example prompts:
+
+```text
+Use x-hot-reply-copilot to design a 7-day X reply experiment for my AI product.
+```
+
+```text
+Use x-hot-reply-copilot to review this X post and generate 5 product-account replies.
+```
+
+```text
+Use x-hot-reply-copilot to build a weekly workflow for finding hot X posts and replying as a product account.
+```
+
+Before using it, fill out:
+
+- Product URL
+- Product name
+- One-line positioning
+- Vision
+- Mission
+- Target users
+- Core pain points
+- Core features
+- Use cases
+- Brand tone
+- Banned claims
+- Banned words
+
+Best use cases:
+
+- plan an X reply growth workflow
+- evaluate which posts are worth replying to
+- generate product-account reply candidates
+- design a 7-day reply experiment
+- turn reply learnings into a weekly operating system
+
+This skill is best used as a planning, drafting, and workflow assistant. It does not auto-publish replies and should keep a human in the loop.
+
 ## Safety Principles
 
 - Do not auto-publish.
