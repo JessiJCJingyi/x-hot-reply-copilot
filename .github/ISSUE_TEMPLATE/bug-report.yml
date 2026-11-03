@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible extension problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Never include API keys, private posts, private profile data, or unredacted account details.
+  - type: input
+    id: browser
+    attributes:
+      label: Chrome version
+    validations:
+      required: true
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: 1. Open... 2. Click... 3. See...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Redacted screenshot or error message
+      description: Remove usernames, keys, private content, and account details first.

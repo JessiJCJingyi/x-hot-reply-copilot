@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="X Hot Reply Copilot 隐私政策。">
+    <title>隐私政策 · X Hot Reply Copilot</title>
+    <link rel="icon" href="assets/brand-mark.png">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="./"><img src="assets/brand-mark.png" alt="" width="36" height="36"><span>X Hot Reply Copilot</span></a><nav><a href="./">首页</a><a href="support.html">支持</a></nav></header>
+    <main class="legal-page">
+      <p class="section-label">LAST UPDATED: 2026-10-24</p>
+      <h1>隐私政策</h1>
+      <p class="legal-lead">本政策说明 X Hot Reply Copilot Chrome 扩展如何处理用户数据。插件只为用户主动请求的热帖识别、资料补全和回复草稿生成功能处理必要数据。</p>
+
+      <h2>1. 插件处理的数据</h2>
+      <ul>
+        <li><strong>X 页面内容：</strong>当前可见帖子的文字、作者、发布时间及公开互动数据，用于识别热帖和生成回复草稿。</li>
+        <li><strong>用户提供的资料：</strong>产品名称、官网、社媒主页、定位、受众、Bio、语气与禁用表达，用于个性化回复。</li>
+        <li><strong>公开网页内容：</strong>仅在用户主动点击资料导入时，读取用户提供的公开 HTTPS 链接，用于提取产品或人设资料。</li>
+        <li><strong>模型配置：</strong>用户自行填写的 API Base URL、模型名称和 API Key，用于调用用户选择的模型服务。</li>
+        <li><strong>界面偏好：</strong>面板尺寸、启动器位置及相关设置，用于恢复用户界面状态。</li>
+      </ul>
+
+      <h2>2. 数据如何使用与传输</h2>
+      <p>热帖扫描在浏览器本地完成。当用户主动生成回复或导入资料时，必要的帖子内容、用户资料或公开网页文本会被发送到用户自行配置的模型 API 服务商。数据传输使用 HTTPS。模型服务商对数据的处理受其自身隐私政策和服务条款约束。</p>
+      <p>开发者不运营中转服务器，不接收用户的帖子内容、产品资料、生成草稿或 API Key，也不会出售这些数据或将其用于广告。</p>
+
+      <h2>3. 本地与 Chrome 存储</h2>
+      <p>插件使用 Chrome 扩展存储保存设置和界面偏好。部分设置可能通过用户登录的 Chrome 账户同步到其其他设备。发布版将把 API Key 保存在设备本地，不随 Chrome Sync 同步。用户可在插件设置中修改或清除资料，也可通过卸载插件删除本地数据。</p>
+
+      <h2>4. 权限用途</h2>
+      <ul>
+        <li><strong>storage：</strong>保存用户配置、产品或人设资料以及界面偏好。</li>
+        <li><strong>x.com / twitter.com：</strong>读取当前页面公开帖子并在用户选择后把草稿插入回复框。</li>
+        <li><strong>模型 API 与用户选择的公开链接：</strong>仅用于用户主动发起的生成或资料导入请求。</li>
+      </ul>
+
+      <h2>5. 数据保留与删除</h2>
+      <p>开发者不保存用户数据。保存在浏览器中的设置由用户控制；用户可以恢复默认设置、删除扩展数据或卸载插件。已经发送给第三方模型服务商的数据，其保留方式由该服务商的政策决定。</p>
+
+      <h2>6. 未成年人</h2>
+      <p>本产品面向能够管理产品或社交媒体账号的成年人，不面向儿童设计，也不会主动收集儿童信息。</p>
+
+      <h2>7. 政策更新</h2>
+      <p>如果插件的数据处理方式发生实质变化，我们会在商店页面、官网或插件内更新说明，并在需要时重新取得用户同意。</p>
+
+      <h2>8. 联系方式</h2>
+      <p>如有隐私问题或删除请求，请通过项目的 <a href="https://github.com/JessiJCJingyi/x-hot-reply-copilot/issues/new?template=privacy-request.yml">隐私请求入口</a>联系开发者。请勿在公开 Issue 中提交 API Key、私人资料或未公开内容。</p>
+
+      <aside class="legal-note">Chrome Web Store Limited Use 声明：本扩展对用户数据的使用将遵守 Chrome Web Store User Data Policy，包括 Limited Use 要求。</aside>
+    </main>
+    <footer><p>© 2026 X Hot Reply Copilot</p><div><a href="./">首页</a><a href="support.html">支持</a></div></footer>
+  </body>
+</html>

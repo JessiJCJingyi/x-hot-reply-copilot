@@ -1,0 +1,27 @@
+name: Privacy request
+description: Ask about data handling or request privacy support
+title: "[Privacy] "
+labels: ["privacy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include API keys, private posts, personal profile details, or other sensitive information. The extension developer does not operate a backend that stores extension content.
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - Data handling question
+        - Local data deletion help
+        - Third-party model provider question
+        - Other privacy concern
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Describe the issue without sharing sensitive data.
+    validations:
+      required: true

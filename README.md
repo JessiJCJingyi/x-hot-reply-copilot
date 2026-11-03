@@ -166,3 +166,12 @@ It does **not** include:
 ## Status
 
 Early product workflow. Use this as a starting point for product-account growth experiments, not as a fully automated posting system.
+
+## Product Website And Store Launch
+
+- Website source: [`docs/`](docs/)
+- Chrome Web Store listing draft: [`store/listing-zh-CN.md`](store/listing-zh-CN.md)
+- Privacy disclosure draft: [`store/privacy-disclosure.md`](store/privacy-disclosure.md)
+- Release checklist: [`store/release-checklist.md`](store/release-checklist.md)
+
+The website is a static GitHub Pages-ready build. Before public release, enable Pages for the repository and complete every P0 item in the release checklist.

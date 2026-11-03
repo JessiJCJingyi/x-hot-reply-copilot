@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="X Hot Reply Copilot 帮助产品官号发现近期热帖，并结合产品资料与账号语气生成可编辑的回复草稿。">
+    <title>X Hot Reply Copilot</title>
+    <link rel="icon" href="assets/brand-mark.png">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="X Hot Reply Copilot 首页">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span>X Hot Reply Copilot</span>
+      </a>
+      <nav aria-label="主要导航">
+        <a href="#product">产品</a><a href="#workflow">工作方式</a><a href="privacy.html">隐私</a><a href="support.html">支持</a>
+      </nav>
+      <a class="header-cta" href="https://github.com/JessiJCJingyi/x-hot-reply-copilot/issues/new?template=beta-access.yml">加入 Beta</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="release-pill"><span></span>Private beta · Chrome extension</div>
+        <h1>把值得回复的帖子<br>变成像你写的回复</h1>
+        <p class="hero-copy">为产品官号和创始人设计。发现近期热帖，读取你的产品与人设资料，生成有上下文、可编辑的回复草稿。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/JessiJCJingyi/x-hot-reply-copilot/issues/new?template=beta-access.yml">申请 Beta <span>↗</span></a>
+          <a class="button button-secondary" href="#product">查看产品</a>
+        </div>
+        <p class="micro-copy">免费 Beta · 自备模型 API Key · 永不自动发布</p>
+      </section>
+
+      <section class="product-showcase" id="product" aria-labelledby="product-heading">
+        <h2 id="product-heading" class="sr-only">产品界面</h2>
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-address">x.com/home</div><div class="browser-menu">•••</div>
+          </div>
+          <div class="product-layout">
+            <div class="feed-preview">
+              <div class="feed-header"><strong>For you</strong><span>Following</span></div>
+              <article class="post-card selected-post">
+                <div class="avatar avatar-blue">B</div>
+                <div class="post-body">
+                  <div class="post-meta"><strong>Builder Notes</strong><span>@buildernotes · 42m</span><span class="hot-badge">1.4K/h</span></div>
+                  <p>AI 产品真正难的，不是模型能力，而是能不能稳定进入用户每天的工作流。</p>
+                  <div class="post-stats"><span>◯ 96</span><span>↻ 31</span><span>♡ 428</span><span>8.2K views</span></div>
+                </div>
+              </article>
+              <article class="post-card">
+                <div class="avatar avatar-green">G</div>
+                <div class="post-body">
+                  <div class="post-meta"><strong>Growth Log</strong><span>@growthlog · 1.8h</span><span class="hot-badge muted-badge">820/h</span></div>
+                  <p>用户不会为更多功能留下，他们会为更少的切换成本留下。</p>
+                  <div class="post-stats"><span>◯ 54</span><span>↻ 18</span><span>♡ 206</span><span>5.6K views</span></div>
+                </div>
+              </article>
+              <article class="post-card low-contrast-post">
+                <div class="avatar">P</div>
+                <div class="post-body"><div class="post-meta"><strong>Product Weekly</strong><span>@productweekly · 3.1h</span></div><p>增长不是把声音放大，而是更快找到真正有反馈的地方。</p></div>
+              </article>
+            </div>
+
+            <aside class="extension-preview" aria-label="X Hot Reply Copilot 界面预览">
+              <div class="extension-header">
+                <div class="extension-title"><span class="brand-mark small-mark"><i></i></span><strong>Reply Copilot</strong></div>
+                <div class="icon-actions"><button type="button" aria-label="设置">⌘</button><button type="button" aria-label="收起">−</button></div>
+              </div>
+              <div class="profile-context"><div><span class="context-tag">产品官号</span><strong>Acme AI</strong></div><p>帮助小团队把分散的研究资料变成清晰、可执行的产品判断。</p></div>
+              <div class="control-row"><button type="button">自动推荐 <span>⌄</span></button><button type="button">5 条 <span>⌄</span></button><button class="scan-control" type="button">扫描 Top 5</button></div>
+              <div class="opportunity-list">
+                <div class="panel-label"><span>回复机会</span><small>最近 12h</small></div>
+                <button class="opportunity active-opportunity" type="button"><span class="rank-number">01</span><span><strong>@buildernotes</strong><small>42m · score 148</small><em>模型能力 vs. 用户工作流</em></span></button>
+                <button class="opportunity" type="button"><span class="rank-number">02</span><span><strong>@growthlog</strong><small>1.8h · score 119</small><em>功能数量与切换成本</em></span></button>
+              </div>
+              <div class="draft-area">
+                <div class="panel-label"><span>回复草稿</span><small>使用 7 个个性化字段</small></div>
+                <article class="draft-card"><p>模型能力只是入场券。真正决定留存的，是它能不能在用户原有流程里少一次查找、一次整理、一次判断。</p><div><span>价值补充</span><button type="button">插入</button></div></article>
+                <article class="draft-card secondary-draft"><p>做产品时越来越明显：用户不缺更聪明的聊天框，缺的是任务做到一半时，AI 已经知道下一步缺什么。</p><div><span>Builder lens</span><button type="button">插入</button></div></article>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="product-proof"><span>本地扫描热帖</span><span>每位用户独立资料</span><span>用户自选模型</span><span>发布前人工确认</span></div>
+      </section>
+
+      <section class="positioning" aria-labelledby="positioning-title">
+        <div class="section-kicker">Built with your context</div>
+        <h2 id="positioning-title">不是又一个通用回复生成器</h2>
+        <p>通用工具只看原帖。Reply Copilot 同时理解你的产品、受众、表达习惯和推广边界，再决定这条回复应该贡献什么。</p>
+      </section>
+
+      <section class="feature-tabs" aria-label="产品能力">
+        <div class="tab-list" role="tablist" aria-label="产品能力切换">
+          <button class="feature-tab is-active" type="button" role="tab" aria-selected="true" data-feature="discover"><span>01</span>找到值得回复的帖子</button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="personalize"><span>02</span>使用你的产品与人设</button>
+          <button class="feature-tab" type="button" role="tab" aria-selected="false" data-feature="review"><span>03</span>编辑后再发布</button>
+        </div>
+        <div class="feature-visual" data-feature-panel="discover">
+          <div class="feature-copy"><span class="feature-index">01 / Discover</span><h3>页面里已经有机会<br>只是缺少排序</h3><p>插件分析当前页面已加载的帖子，综合发布时间、公开互动和回复窗口，展示 Top 5 或 Top 10。</p></div>
+          <div class="mini-ui ranking-ui"><div class="mini-toolbar"><span>Hot post radar</span><strong>12h ▾</strong></div><div class="rank-row highlighted"><b>01</b><span><strong>@buildernotes</strong><small>1.4K/h · 42m</small></span><em>148</em></div><div class="rank-row"><b>02</b><span><strong>@growthlog</strong><small>820/h · 1.8h</small></span><em>119</em></div><div class="rank-row"><b>03</b><span><strong>@shipweekly</strong><small>510/h · 3.1h</small></span><em>93</em></div></div>
+        </div>
+        <div class="feature-visual" data-feature-panel="personalize" hidden>
+          <div class="feature-copy"><span class="feature-index">02 / Personalize</span><h3>同一条帖子<br>不同账号不该写出同一句</h3><p>读取用户主动提供的官网、公开社媒或 portfolio，并结合定位、受众、Bio、语气和禁用表达。</p></div>
+          <div class="mini-ui profile-ui"><div class="profile-row"><span>Mode</span><strong>Product account</strong></div><div class="profile-row"><span>Positioning</span><strong>Research → product decisions</strong></div><div class="profile-row"><span>Voice</span><strong>Direct, useful, restrained</strong></div><div class="profile-row"><span>Mention policy</span><strong>Value first</strong></div><div class="context-meter"><span>Context coverage</span><strong>7 / 8</strong><i></i></div></div>
+        </div>
+        <div class="feature-visual" data-feature-panel="review" hidden>
+          <div class="feature-copy"><span class="feature-index">03 / Review</span><h3>AI 负责起草<br>你保留最后判断</h3><p>每条结果都可复制、插入和继续编辑。插件不会批量评论，也不会代替用户点击发布。</p></div>
+          <div class="mini-ui review-ui"><div class="review-label"><span>Draft</span><small>Ready to edit</small></div><p>真正影响留存的，不是多一个功能，而是少一次切换、少一次等待、少一次重新解释上下文。</p><div class="review-actions"><button type="button">Copy</button><button class="dark-button" type="button">Insert draft</button></div></div>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div class="workflow-heading"><span class="section-kicker">One focused workflow</span><h2 id="workflow-title">四步完成高质量回复</h2></div>
+        <ol class="workflow-list">
+          <li><span>01</span><div><h3>补全账号上下文</h3><p>提供官网、公开社媒或个人资料，并确认提取结果。</p></div></li>
+          <li><span>02</span><div><h3>选择回复机会</h3><p>在当前 X 页面查看近期帖子的机会排序。</p></div></li>
+          <li><span>03</span><div><h3>比较多个角度</h3><p>从价值补充、建设者视角或轻量产品关联中选择。</p></div></li>
+          <li><span>04</span><div><h3>编辑并人工发布</h3><p>草稿插入回复框后仍可修改，最终操作始终由用户完成。</p></div></li>
+        </ol>
+      </section>
+
+      <section class="trust-section" aria-labelledby="trust-title">
+        <div><span class="section-kicker">Privacy by design</span><h2 id="trust-title">账号上下文<br>不属于我们</h2></div>
+        <div class="trust-copy"><p>热帖排序在浏览器本地完成。只有当你主动生成回复或导入资料时，必要内容才会发送给你自行配置的模型服务商。</p><p>开发者不接收你的帖子内容、产品资料、回复草稿或 API Key。</p><a href="privacy.html">阅读隐私政策 <span>→</span></a></div>
+      </section>
+
+      <section class="beta" id="beta" aria-labelledby="beta-title"><span class="section-kicker">Private beta</span><h2 id="beta-title">为你的下一条高质量回复<br>少做一点机械工作</h2><p>当前开放少量产品创始人和产品官号试用。</p><a class="button button-primary" href="https://github.com/JessiJCJingyi/x-hot-reply-copilot/issues/new?template=beta-access.yml">申请 Beta <span>↗</span></a></section>
+    </main>
+
+    <footer><div class="footer-brand"><span class="brand-mark small-mark" aria-hidden="true"><i></i></span><strong>X Hot Reply Copilot</strong></div><p>Independent product. Not affiliated with or endorsed by X Corp.</p><div><a href="privacy.html">隐私</a><a href="support.html">支持</a><a href="https://github.com/JessiJCJingyi/x-hot-reply-copilot">GitHub</a></div></footer>
+  </body>
+</html>
