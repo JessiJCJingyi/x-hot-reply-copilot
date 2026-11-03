@@ -43,8 +43,8 @@
 
 ## Pre-submit blockers
 
-- [ ] API Key 从 `chrome.storage.sync` 迁移到 `chrome.storage.local`。
-- [ ] `https://*/*` 改为最小必要的固定域名与运行时可选权限。
-- [ ] 插件内首次使用前展示数据流说明并要求用户主动确认。
-- [ ] 对任意公开网页和自定义 API 域名的访问仅在用户操作后申请。
+- [x] API Key 从 `chrome.storage.sync` 迁移到 `chrome.storage.local`。
+- [x] `https://*/*` 改为最小必要的固定域名与运行时可选权限。
+- [x] 插件内首次使用前展示数据流说明并要求用户主动确认。
+- [x] 对任意公开网页和自定义 API 域名的访问仅在用户操作后申请。
 - [ ] 逐项核对 Developer Dashboard 的数据披露与本文件一致。

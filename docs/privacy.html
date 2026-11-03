@@ -11,7 +11,7 @@
   <body>
     <header class="site-header"><a class="brand" href="./"><img src="assets/brand-mark.png" alt="" width="36" height="36"><span>X Hot Reply Copilot</span></a><nav><a href="./">首页</a><a href="support.html">支持</a></nav></header>
     <main class="legal-page">
-      <p class="section-label">LAST UPDATED: 2026-10-24</p>
+      <p class="section-label">LAST UPDATED: 2026-11-03</p>
       <h1>隐私政策</h1>
       <p class="legal-lead">本政策说明 X Hot Reply Copilot Chrome 扩展如何处理用户数据。插件只为用户主动请求的热帖识别、资料补全和回复草稿生成功能处理必要数据。</p>
 
@@ -25,17 +25,18 @@
       </ul>
 
       <h2>2. 数据如何使用与传输</h2>
+      <p>首次启用页面读取前，插件会在设置页展示数据流说明并要求用户主动勾选确认。确认前，插件不会启动热帖扫描或读取帖子内容；用户可以随时取消确认并暂停页面读取。</p>
       <p>热帖扫描在浏览器本地完成。当用户主动生成回复或导入资料时，必要的帖子内容、用户资料或公开网页文本会被发送到用户自行配置的模型 API 服务商。数据传输使用 HTTPS。模型服务商对数据的处理受其自身隐私政策和服务条款约束。</p>
       <p>开发者不运营中转服务器，不接收用户的帖子内容、产品资料、生成草稿或 API Key，也不会出售这些数据或将其用于广告。</p>
 
       <h2>3. 本地与 Chrome 存储</h2>
-      <p>插件使用 Chrome 扩展存储保存设置和界面偏好。部分设置可能通过用户登录的 Chrome 账户同步到其其他设备。发布版将把 API Key 保存在设备本地，不随 Chrome Sync 同步。用户可在插件设置中修改或清除资料，也可通过卸载插件删除本地数据。</p>
+      <p>插件使用 Chrome 扩展存储保存设置和界面偏好。非敏感设置可能通过用户登录的 Chrome 账户同步到其其他设备。API Key 只保存在当前设备的 <code>chrome.storage.local</code> 中，不写入 Chrome Sync。用户可在插件设置中修改或清除资料，也可通过卸载插件删除本地数据。</p>
 
       <h2>4. 权限用途</h2>
       <ul>
         <li><strong>storage：</strong>保存用户配置、产品或人设资料以及界面偏好。</li>
         <li><strong>x.com / twitter.com：</strong>读取当前页面公开帖子并在用户选择后把草稿插入回复框。</li>
-        <li><strong>模型 API 与用户选择的公开链接：</strong>仅用于用户主动发起的生成或资料导入请求。</li>
+        <li><strong>模型 API 与用户选择的公开链接：</strong>已知模型域名使用固定的最小权限；其他公开 HTTPS 域名仅在用户主动保存或导入时按域名申请访问权限。</li>
       </ul>
 
       <h2>5. 数据保留与删除</h2>

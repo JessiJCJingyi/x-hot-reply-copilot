@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>X 回复助手设置</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1>X 回复助手设置</h1>
+      <label>
+        模型供应商
+        <select id="provider">
+          <option value="ikuncode">IKunCode 中转站</option>
+          <option value="openai">OpenAI</option>
+          <option value="deepseek">DeepSeek</option>
+          <option value="openrouter">OpenRouter</option>
+          <option value="siliconflow">硅基流动 SiliconFlow</option>
+          <option value="custom">自定义兼容接口</option>
+        </select>
+      </label>
+      <label>
+        API Key
+        <input id="apiKey" type="password" autocomplete="off" placeholder="sk-...">
+      </label>
+      <label>
+        API Base URL
+        <input id="apiBaseUrl" type="url" placeholder="https://api.ikuncode.cc/v1">
+      </label>
+      <p id="providerHint" class="field-hint">填写 API Base URL 后自动识别供应商。</p>
+      <label>
+        接口类型
+        <select id="apiMode">
+          <option value="responses">OpenAI Responses API</option>
+          <option value="chat">OpenAI-compatible Chat API</option>
+        </select>
+      </label>
+      <label>
+        <span id="modelLabel">模型</span>
+        <input id="model" type="text" placeholder="claude-opus-4-6">
+      </label>
+      <section class="data-disclosure" aria-labelledby="dataDisclosureTitle">
+        <h2 id="dataDisclosureTitle">生成前的数据说明</h2>
+        <p>热帖扫描在浏览器本地完成。只有当你主动生成回复或读取资料链接时，当前帖子、你填写的账号资料或公开网页文字才会发送到你选择的模型服务商。API Key 仅保存在本机，不会同步给开发者。</p>
+        <label class="consent-row">
+          <input id="dataConsent" type="checkbox">
+          <span>我同意插件在当前 X 页面本地读取公开帖子，并在我主动生成或导入资料时，向所选模型服务商发送必要内容</span>
+        </label>
+        <p class="field-hint"><a href="https://xhotreply.com/privacy.html" target="_blank" rel="noreferrer">查看完整隐私政策</a></p>
+      </section>
+      <h2>回复身份</h2>
+      <label>
+        账号类型
+        <select id="profileMode">
+          <option value="product">产品官号</option>
+          <option value="persona">个人号 / 创始人人设</option>
+        </select>
+      </label>
+      <label>
+        产品名称
+        <input id="productName" type="text" placeholder="ARTi.ai">
+      </label>
+      <label>
+        产品网址
+        <input id="productUrl" type="url" placeholder="https://...">
+      </label>
+      <label>
+        社媒主页
+        <input id="socialUrl" type="url" placeholder="https://x.com/your_account">
+      </label>
+      <label>
+        其他资料来源
+        <textarea id="sourceUrls" rows="3" placeholder="个人 Portfolio、Notion、LinkedIn 或其他公开页面，每行一个链接，最多 5 个。"></textarea>
+      </label>
+      <button id="importProfile" class="secondary-action" type="button">读取链接并补全资料</button>
+      <p class="field-hint">只读取公开 HTTPS 页面。重新读取时会更新个人 Bio，其余已填写内容保持不变，检查后再保存。</p>
+      <label>
+        一句话介绍
+        <textarea id="productSummary" rows="3" placeholder="用一句话说明你的产品或个人账号在帮助谁解决什么问题。"></textarea>
+      </label>
+      <label>
+        目标用户
+        <textarea id="audience" rows="3"></textarea>
+      </label>
+      <label>
+        产品定位
+        <textarea id="positioning" rows="3"></textarea>
+      </label>
+      <label>
+        核心价值
+        <textarea id="coreValue" rows="3" placeholder="用户为什么需要你？你帮用户省时间、涨收入、降低风险，还是提升质量？"></textarea>
+      </label>
+      <label>
+        典型使用场景
+        <textarea id="useCases" rows="3" placeholder="列 2-4 个最常见的使用场景。"></textarea>
+      </label>
+      <label>
+        差异化
+        <textarea id="differentiator" rows="3" placeholder="你和普通替代品相比，最不同的地方是什么？"></textarea>
+      </label>
+      <label>
+        个人身份 / 人设
+        <textarea id="personaIdentity" rows="3" placeholder="如果是个人号，写你的身份、经历、长期关注领域。"></textarea>
+      </label>
+      <label>
+        个人简介 / Bio
+        <textarea id="personaBio" rows="3" placeholder="个人号希望对外展示的简介。保存后会显示在插件卡片中，并用于个性化回复。"></textarea>
+      </label>
+      <label>
+        个人表达风格
+        <textarea id="personaVoice" rows="3" placeholder="比如：直接、克制、有产品视角、少鸡汤、偏实战。"></textarea>
+      </label>
+      <label>
+        官号语气
+        <textarea id="tone" rows="3"></textarea>
+      </label>
+      <label>
+        产品提及上限
+        <select id="mentionPolicy">
+          <option value="default">默认克制：高度相关时才轻提</option>
+          <option value="never">纯价值：永远不主动提产品</option>
+          <option value="soft">软提及：允许产品建设视角</option>
+          <option value="direct">直接 CTA：允许明确推广（谨慎）</option>
+        </select>
+      </label>
+      <label>
+        回复语言
+        <select id="replyLanguage">
+          <option value="auto">跟随原帖语言</option>
+          <option value="zh">中文</option>
+          <option value="en">英文</option>
+          <option value="bilingual">中英文都可</option>
+        </select>
+      </label>
+      <label>
+        禁用表达
+        <textarea id="bannedWords" rows="3"></textarea>
+      </label>
+      <div class="actions">
+        <button id="save">保存</button>
+        <button id="reset" type="button">恢复默认</button>
+      </div>
+      <p id="status"></p>
+      <p class="notice">
+        部分回复方法论参考 kangarooking/X-growth-skills，去 AI 味规则参考 larashero3-dotcom/lieflat-less-ai-tone（均为 MIT License）。本插件为独立项目，不代表原作者或相关平台背书。
+      </p>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

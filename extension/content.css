@@ -1,0 +1,406 @@
+#xgra-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  width: 360px;
+  height: 520px;
+  max-height: calc(100vh - 36px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(83, 100, 113, 0.28);
+  border-radius: 8px;
+  background: #fff;
+  color: #0f1419;
+  box-shadow: 0 16px 48px rgba(15, 20, 25, 0.18);
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#xgra-panel.xgra-collapsed .xgra-body {
+  display: none;
+}
+
+#xgra-panel.xgra-collapsed {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px;
+}
+
+#xgra-panel.xgra-collapsed .xgra-title,
+#xgra-panel.xgra-collapsed [data-action="options"],
+#xgra-panel.xgra-collapsed .xgra-resize {
+  display: none;
+}
+
+#xgra-panel.xgra-collapsed .xgra-header {
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
+
+#xgra-panel.xgra-collapsed .xgra-header-actions {
+  width: 100%;
+  height: 100%;
+}
+
+#xgra-panel.xgra-collapsed button[data-action="toggle"] {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  border: 0;
+  border-radius: 11px;
+  background: #0f1419;
+  color: #fff;
+  font-size: 22px;
+  cursor: grab;
+}
+
+#xgra-panel.xgra-collapsed button[data-action="toggle"]:active {
+  cursor: grabbing;
+}
+
+.xgra-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(83, 100, 113, 0.18);
+  background: #f7f9f9;
+}
+
+.xgra-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.xgra-header-actions,
+.xgra-actions,
+.xgra-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.xgra-body {
+  flex: 1;
+  min-height: 0;
+  padding: 12px;
+  overflow: auto;
+}
+
+.xgra-profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 8px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid rgba(83, 100, 113, 0.18);
+  border-radius: 6px;
+  background: #f7f9f9;
+}
+
+.xgra-profile-type {
+  border-radius: 999px;
+  padding: 2px 7px;
+  background: #0f1419;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.xgra-profile-name {
+  min-width: 0;
+  overflow: hidden;
+  color: #0f1419;
+  font-size: 12px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.xgra-profile-desc {
+  grid-column: 1 / -1;
+  color: #536471;
+  font-size: 12px;
+}
+
+.xgra-hot-panel {
+  margin-top: 10px;
+  border: 1px solid rgba(83, 100, 113, 0.18);
+  border-radius: 8px;
+  background: #fbfdfe;
+}
+
+.xgra-hot-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid rgba(83, 100, 113, 0.14);
+}
+
+.xgra-hot-head strong {
+  font-size: 13px;
+}
+
+.xgra-hot-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+#xgra-panel .xgra-hot-controls select {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 78px;
+}
+
+#xgra-panel .xgra-hot-controls button {
+  flex: 0 0 auto;
+}
+
+.xgra-hot-list {
+  display: grid;
+  gap: 6px;
+  max-height: 220px;
+  overflow: auto;
+  padding: 8px;
+  color: #536471;
+  font-size: 12px;
+}
+
+#xgra-panel .xgra-hot-item {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  padding: 8px;
+  text-align: left;
+  border-color: rgba(83, 100, 113, 0.18);
+}
+
+.xgra-hot-rank {
+  color: #0f1419;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.xgra-hot-main,
+.xgra-hot-meta,
+.xgra-hot-text,
+.xgra-hot-stats {
+  min-width: 0;
+}
+
+.xgra-hot-main {
+  display: grid;
+  gap: 4px;
+}
+
+.xgra-hot-meta,
+.xgra-hot-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #536471;
+  font-size: 11px;
+}
+
+.xgra-hot-meta strong {
+  color: #0f1419;
+}
+
+.xgra-hot-text {
+  color: #0f1419;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.xgra-hot-badge {
+  position: absolute;
+  top: 8px;
+  right: 48px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 24px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 8px;
+  font: 700 12px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(15, 20, 25, 0.12);
+}
+
+.xgra-hot-badge-fresh {
+  background: #d9f7df;
+  color: #1f7a35;
+}
+
+.xgra-hot-badge-warm {
+  background: #ffe3b3;
+  color: #9a5a00;
+}
+
+.xgra-hot-badge-fire {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+article.xgra-hot-selected {
+  outline: 2px solid rgba(29, 155, 240, 0.55);
+  outline-offset: -2px;
+  background: rgba(29, 155, 240, 0.04);
+}
+
+#xgra-panel button,
+#xgra-panel select {
+  border: 1px solid rgba(83, 100, 113, 0.35);
+  border-radius: 6px;
+  background: #fff;
+  color: #0f1419;
+  font: inherit;
+}
+
+#xgra-panel button {
+  min-height: 32px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+#xgra-panel button:hover {
+  background: #eff3f4;
+}
+
+#xgra-panel button.xgra-primary {
+  border-color: #0f1419;
+  background: #0f1419;
+  color: #fff;
+}
+
+#xgra-panel button.xgra-icon {
+  width: 30px;
+  min-height: 30px;
+  padding: 0;
+}
+
+#xgra-panel select {
+  height: 32px;
+  padding: 0 8px;
+  flex: 1;
+}
+
+.xgra-tweet {
+  margin: 10px 0;
+  padding: 10px;
+  min-height: 58px;
+  max-height: 120px;
+  overflow: auto;
+  border: 1px solid rgba(83, 100, 113, 0.18);
+  border-radius: 6px;
+  background: #f7f9f9;
+  white-space: pre-wrap;
+}
+
+.xgra-status {
+  min-height: 20px;
+  margin: 8px 0;
+  color: #536471;
+  font-size: 12px;
+}
+
+.xgra-reply {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid rgba(83, 100, 113, 0.18);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.xgra-reply-text {
+  white-space: pre-wrap;
+}
+
+.xgra-reply-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.xgra-small {
+  color: #536471;
+  font-size: 12px;
+}
+
+.xgra-resize {
+  position: absolute;
+  z-index: 1;
+}
+
+.xgra-resize-left {
+  top: 0;
+  left: -4px;
+  width: 8px;
+  height: 100%;
+  cursor: ew-resize;
+}
+
+.xgra-resize-top {
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  cursor: ns-resize;
+}
+
+.xgra-resize-corner {
+  top: -6px;
+  left: -6px;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+}
+
+.xgra-resize-corner::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid rgba(83, 100, 113, 0.55);
+  border-top: 2px solid rgba(83, 100, 113, 0.55);
+}
+
+#xgra-panel.xgra-resizing {
+  user-select: none;
+}
+
+@media (max-width: 520px) {
+  #xgra-panel {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .xgra-resize {
+    display: none;
+  }
+}

@@ -27,6 +27,7 @@ X Hot Reply Copilot 是为产品创始人、产品官号和个人品牌设计的
 隐私与控制：
 
 - 每位用户使用自己的模型 API Key
+- 首次启用页面读取前展示数据流说明并要求用户主动确认
 - 热帖扫描在浏览器本地完成
 - 只有用户主动生成或导入资料时，必要内容才会发送到用户配置的模型服务商
 - 开发者不接收用户的帖子内容、产品资料、草稿或 API Key
@@ -47,12 +48,12 @@ Productivity
 
 ## 官网
 
-发布 GitHub Pages 后填写最终 URL。
+`https://xhotreply.com/`
 
 ## 支持页
 
-`<官网 URL>/support.html`
+`https://xhotreply.com/support.html`
 
 ## 隐私政策
 
-`<官网 URL>/privacy.html`
+`https://xhotreply.com/privacy.html`

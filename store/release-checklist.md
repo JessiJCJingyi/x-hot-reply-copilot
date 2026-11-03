@@ -2,29 +2,29 @@
 
 ## P0：提交前必须完成
 
-- [ ] 修复全部自动化测试，保持 `node --test tests/*.test.js` 全绿。
-- [ ] API Key 只保存在本机，不进入 Chrome Sync。
-- [ ] 收窄全网 host permission；任意 URL 访问改为用户触发的 optional permission。
-- [ ] 加入 16、32、48、128 px 图标并在 manifest 声明。
-- [ ] 在插件首次使用或设置页展示清晰的数据流与第三方模型提示。
+- [x] 修复全部自动化测试，保持 `node --test tests/*.test.js` 全绿。
+- [x] API Key 只保存在本机，不进入 Chrome Sync。
+- [x] 收窄全网 host permission；任意 URL 访问改为用户触发的 optional permission。
+- [x] 加入 16、32、48、128 px 图标并在 manifest 声明。
+- [x] 在插件首次使用或设置页展示清晰的数据流与第三方模型提示。
 - [ ] 完成 20 条真实帖回归：扫描成功率 ≥90%，生成成功率 ≥95%，无阻塞性插入/编辑错误。
 - [ ] 复核版本号、产品名、描述与实际行为。
-- [ ] 生成发布 ZIP，确认不包含 API Key、日志、测试夹和开发文件。
+- [x] 生成发布 ZIP，确认不包含 API Key、日志、测试夹和开发文件。
 
 ## 商店账户与页面
 
 - [ ] 使用长期维护的 Google 账号注册 Chrome Web Store Developer。
-- [ ] 开启 Google 账号两步验证。
+- [x] 开启 Google 账号两步验证。
 - [ ] 支付一次性开发者注册费；以 Dashboard 当前显示金额为准。
 - [ ] 填写开发者名称、联系邮箱并完成必要验证。
-- [ ] 发布官网、隐私政策与支持页。
+- [x] 发布官网、隐私政策与支持页。
 - [ ] 填写 Single purpose、权限理由和数据披露。
 
 ## 素材
 
 - [x] 128×128 商店图标初稿。
 - [ ] 至少 1 张 1280×800 产品截图，建议准备 3 张。
-- [ ] 可选 440×280 Small promo tile。
+- [ ] 440×280 Small promo tile（商店要求）。
 - [ ] 可选 1400×560 Marquee image。
 - [ ] 录制 30–45 秒真实操作视频，可在 Beta 后补充。
 
